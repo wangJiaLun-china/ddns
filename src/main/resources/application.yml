@@ -1,0 +1,11 @@
+# 网络请求地址,访问该网址获取当前的公网ip
+pub-network-address: https://ifconfig.co/ip
+
+aliddns:
+  # access-key-id 和 access-key-secret 从下面阿里云链接获取
+  # https://usercenter.console.aliyun.com/?spm=api-workbench.API%20Explorer.0.0.6e491e0fFtDFOK#/manage/ak
+  access-key-id: *
+  access-key-secret: *
+  # 需要解析的域名
+  domain-name: wangjialun.top
+  end-point: alidns.cn-hangzhou.aliyuncs.com
