@@ -116,6 +116,18 @@
     }
     ```
 
+- 打成jar包运行  
+  1. 点击 Maven -> ddns -> package 可以在项目target目录下生成ddns-1.0-SNAPSHOT.jar 
+  2. 将生成的jar包复制到自己的program下(比如 D:\program\ddns 可以改成简单点的文件名)
+  3. 运行程序: java -jar D:\program\ddns.jar。 (到这一步已经运行起来了，可以进行测试一下,但是每次开机都要重新执行命令，相对比较麻烦，可以设置成开机自启)
+  4. 新建空白文件，编写执行命令，保存为bat文件，将其放置C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+     ```bat
+       @echo off
+       D:
+       cd D:\program
+       java -jar ddns.jar
+     ```
+
 ### 测试
 
 去阿里云平台上面把域名的解析记录随便改了个值, 过几分钟后变成了我当前的公网ip地址
